@@ -120,6 +120,7 @@ class Home extends React.Component{
           <NewComment 
             coords={this.state.newComment.coords}
             closeNewComment={this.closeNewComment}
+            chatSocket={this.props.chatSocket}
           />
           }
         </section>

@@ -8,7 +8,12 @@ class NewComment extends React.Component {
 
   handlesubmit = (event) => {
     event.preventDefault()
-    console.log(this.state.message)
+    // console.log(this.state.message)
+    this.props.chatSocket.send(JSON.stringify({
+      'message': this.state.message,
+      'x': '199',
+      'y': '0'
+    }))
     this.props.closeNewComment()
   }
 
